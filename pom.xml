@@ -2,8 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
  
-  <groupId>me.sumeetdas</groupId>
+  <groupId>io.github.sumeetdas</groupId>
   <artifactId>java-competitive-programming</artifactId>
+  <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
  
   <name>java-competitive-programming</name>
@@ -30,4 +31,11 @@
         
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <repository>
+        <id>me.sumeetdas</id>
+        <url>https://maven.pkg.jetbrains.space/mycompany/p/projectkey/my-maven-repo</url>
+    </repository>
+  </distributionManagement>
 </project>
