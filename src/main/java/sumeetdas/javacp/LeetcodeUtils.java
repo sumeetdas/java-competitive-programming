@@ -2,16 +2,17 @@ package sumeetdas.javacp;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 import sumeetdas.javacp.datastructures.queues.ArrayQueue;
 import sumeetdas.javacp.datastructures.trees.LeetcodeTreeNode;
 
 public class LeetcodeUtils {
-    public <T> List<T> getLevelFirstTreeRepresentation (LeetcodeTreeNode<T> lcTreeNode) {
+    public static <T> List<T> getLevelFirstTreeRepresentation (LeetcodeTreeNode<T> lcTreeNode) {
 
         var list = new ArrayList<T>();
         if (null == lcTreeNode) {
-            return null;
+            return list;
         }
         var queue = new ArrayQueue<LeetcodeTreeNode<T>>();
         queue.addLast(lcTreeNode);
@@ -35,7 +36,7 @@ public class LeetcodeUtils {
         return list;
     }
 
-    public <T> LeetcodeTreeNode<T> getRootNodeFromLevelFirstArray (T[] p) {
+    public static <T> LeetcodeTreeNode<T> getRootNodeFromLevelFirstArray (T[] p) {
         if (null == p || p.length == 0) {
             return null;
         }
