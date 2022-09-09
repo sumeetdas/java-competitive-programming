@@ -31,6 +31,10 @@ public class ArrayQueue<T> implements IQueue<T> {
         return true;
     }
 
+    public boolean addLast(T value) {
+        return offer(value);
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -55,6 +59,10 @@ public class ArrayQueue<T> implements IQueue<T> {
             shrink();
 
         return t;
+    }
+
+    public T removeFirst() {
+        return poll();
     }
 
     /**
@@ -197,6 +205,10 @@ public class ArrayQueue<T> implements IQueue<T> {
     @Override
     public int size() {
         return lastIndex - firstIndex;
+    }
+
+    public boolean isEmpty() {
+        return size() == 0;
     }
 
     /**
